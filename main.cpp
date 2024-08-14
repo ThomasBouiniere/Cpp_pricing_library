@@ -15,10 +15,10 @@ int main() {
     double putPrice = bsModel.calculatePutPrice(opt);
     double monteCarloPutPrice = monteCarloPricer.putPrice;
 
-    std::cout << "Call Option Price: " << callPrice << std::endl;
+    std::cout << "Call Option Price with BS model: " << callPrice << std::endl;
     std::cout << "Call Price with monte carlo: " << monteCarloCallPrice << std::endl;
 
-    std::cout << "Put Option Price: " << putPrice << std::endl;
+    std::cout << "Put Option Price with BS model: " << putPrice << std::endl;
     std::cout << "Put Price with monte carlo: " << monteCarloPutPrice << std::endl;
 
     std::cout << "Comparing the call greeks with BS // monte carlo simulation : " << std::endl;

@@ -35,12 +35,6 @@ double MonteCarloOptionPricer::calculateOptionPrice(std::string OptionType) {
     double risk_free_rate = option.getRiskFreeRate();
     double time_to_maturity = option.getTimeToMaturity();
 
-    // std::cout << "spot_price: " << spot_price << std::endl;
-    // std::cout << "strike_price: " << strike_price << std::endl;
-    // std::cout << "volatility: " << volatility << std::endl;
-    // std::cout << "risk_free_rate: " << risk_free_rate << std::endl;
-    // std::cout << "time_to_maturity: " << time_to_maturity << std::endl;
-
     double S_adjust = spot_price * std::exp(time_to_maturity*(risk_free_rate-0.5*volatility*volatility));   // The adjustment to the spot price   
     double S_cur = 0.0;   // Our current asset price ("spot")
     double payoff_sum = 0.0;  // Holds the sum of all of the final option pay-offs
